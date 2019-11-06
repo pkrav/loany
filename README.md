@@ -2,6 +2,25 @@
 
 This is a simple loan application processing service implemented with Elixir and Phoenix.
 
+## Description and thought process
+
+First of all I have started with development of this application with 
+Loan Request scheme, migration for it and validation rules for the fields. 
+
+After that, I thought about 
+what is the best way to store the minimum amount for requested loans without 
+using Postgres and came to the conclusion that the best way would be 
+to implement a simple cache. This cache helped implement required scoring strategy.
+
+When the data scheme and scoring strategy were ready I have started development of
+Loan Request Controller and templates for it. I have decided that loan request form should
+be shown for `/` and `/requests/new` addresses, `/requests/:id` should show page 
+with offer or with rejection depending on the scoring result. New loan requests 
+should be added using `POST /requests` request and historical data with loan 
+applications should be available on `/requests` with `GET` request.
+
+
+
 ## Requirements
 
 * Erlang >= 20
