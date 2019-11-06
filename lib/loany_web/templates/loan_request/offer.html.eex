@@ -1,0 +1,20 @@
+<div>
+  <h1>Your loan application has been approved!</h1>
+  You can find details of your loan offer below:
+  <label>
+    Amount: <%= @loan_request.amount %>
+  </label>
+  <label>
+    Name: <%= @loan_request.name %>
+  </label>
+  <label>
+    Phone: <%= @loan_request.phone %>
+  </label>
+  <label>
+    Email: <%= @loan_request.email %>
+  </label>
+  <label>
+    Interest rate: <%= @loan_request.interest_rate %>
+  </label>
+</div>
+<img src="https://media.giphy.com/media/xTiTnqUxyWbsAXq7Ju/giphy.gif"/>

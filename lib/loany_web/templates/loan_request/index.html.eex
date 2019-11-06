@@ -1,0 +1,29 @@
+<h1>Loan Applications List</h1>
+<div>
+  <table>
+    <thead>
+      <th>Requested loan amount (in SEK)</th>
+      <th>Applicant Names</th>
+      <th>Phone number</th>
+      <th>Email</th>
+      <th>Interest Rate</th>
+    </thead>
+    <tbody>
+      <%= for loan_request <- @loan_requests do %>
+        <tr>
+          <td><%= loan_request.amount %></td>
+          <td><%= loan_request.name %></td>
+          <td><%= loan_request.phone %></td>
+          <td><%= loan_request.email %></td>
+          <td>
+            <%= if loan_request.status do %>
+              <%= loan_request.interest_rate |> Decimal.round(2) %>
+            <% else %>
+              <b>REJ</b>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

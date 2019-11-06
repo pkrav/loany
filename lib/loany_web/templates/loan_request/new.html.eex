@@ -1,0 +1,11 @@
+<h1>Loan Application form</h1>
+<div class="form-group">
+  <%= form_for @changeset, Routes.loan_request_path(@conn, :create), fn f -> %>
+    <%= input f, :amount, "Requested loan amount (in SEK)" %>
+    <%= input f, :name, "Applicant names" %>
+    <%= input f, :phone, "Phone number" %>
+    <%= input f, :email %>
+
+    <%= submit "Submit" %>
+  <% end %>
+</div>

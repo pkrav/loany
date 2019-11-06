@@ -1,0 +1,9 @@
+<script>
+  setTimeout(function(){
+    window.location.href = "/requests/new";
+  }, 3000)
+</script>
+<div>
+  <h1 align="center">Try again!</h1>
+</div>
+<img src="https://media.giphy.com/media/Km2YiI2mzRKgw/giphy.gif"/>
